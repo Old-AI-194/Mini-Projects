@@ -92,7 +92,7 @@ if __name__ == "__main__":
     symbol_list = ['VN30F1M', 'VN30F2M', 'VN30F1Q', 'VN30F2Q']
     csv_dir = 'D:/BA Future/'
     chrome_dir = "D:/chromedriver_win32/chromedriver.exe"
-    username = '0001582696'
-    password = 'manhtien194'
+    username = 'Nhap account VND tai day'
+    password = 'Nhap password VND tai day'
 
     crawl = Crawl(symbol_list, csv_dir, chrome_dir, username, password)
