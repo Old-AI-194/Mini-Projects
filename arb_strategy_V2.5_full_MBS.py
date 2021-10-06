@@ -200,8 +200,7 @@ class Trading:
 
                         # ------------------------------------------DAT LENH-------------------------------------------#
                         # Side 0:
-                        if self.bid_x - self.bid_y - self.MA[0] - tp - self.fee + self.over_tp[i] - 0.1 > 0 and \
-                                self.position[0][i] == 0 and self.time_now.time() < datetime.time(hour=14, minute=20):
+                        if ".................Dieu kien vao lenh.....................":
                             try:
                                 # Dat lenh LO
                                 lp0 = round(self.bid_y + 0.1, 1)  # Gia lenh LO side 0 se dat
@@ -262,8 +261,7 @@ class Trading:
                                 print('Dang nhap lai hoan tat !!!')
 
                         # Side 1:
-                        elif self.ask_y - self.ask_x - self.MA[1] - self.fee - tp + self.over_tp[i] - 0.1 > 0 and \
-                                self.position[1][i] == 0 and self.time_now.time() < datetime.time(hour=14, minute=20):
+                        elif ".................Dieu kien vao lenh.....................":
                             try:
                                 # Dat lenh LO
                                 lp1 = round(self.ask_y - 0.1, 1)  # Gia lenh LO side 1 se dat
@@ -325,10 +323,7 @@ class Trading:
 
                         # ------------------------------------------HUY LENH/CHECK KHOP-------------------------------------------#
                         # Side 0:
-                        elif self.position[0][i] == -1 and (
-                                self.bid_x_1 - self.bid_y - self.MA[0] - tp - self.fee + self.over_tp[
-                            i] + self.zone_len <= 0
-                                or self.bid_y > self.order_price[0][i]):
+                        elif ".................Dieu kien huy lenh.....................":
                             try:
                                 self.vps.find_element_by_id(self.id_cancel[0][i]).click()
                                 sleep(1)
@@ -347,10 +342,7 @@ class Trading:
                                                                                self.id_cancel[0][i]))
 
                         # Side 1:
-                        elif self.position[1][i] == -1 and (
-                                self.ask_y - self.ask_x_1 - self.MA[1] - self.fee - tp + self.over_tp[
-                            i] + self.zone_len <= 0
-                                or self.ask_y < self.order_price[1][i]):
+                        elif ".................Dieu kien huy lenh.....................":
                             try:
                                 self.vps.find_element_by_id(self.id_cancel[1][i]).click()
                                 sleep(1)
@@ -371,8 +363,7 @@ class Trading:
 
                         # ------------------------------------------DONG LENH-------------------------------------------#
                         # Side 0:
-                        elif self.position[0][i] == 1 and self.diff[0][-1] < self.target[0][i] and abs(
-                                self.bid_y - self.bid_y_1) < tp:
+                        elif ".................Dieu kien dong lenh.....................":
                             try:
                                 self.vps.find_element_by_xpath('//*[@id="right_btnordertype"]/div/span[3]').click() #Chon MTL
                                 sleep(0.1)
@@ -391,8 +382,7 @@ class Trading:
                                 print('Dang nhap lai hoan tat !!!')
 
                         # Side 1:
-                        elif self.position[1][i] == 1 and self.diff[1][-1] < self.target[1][i] and abs(
-                                self.ask_y_1 - self.ask_y) < tp:
+                        elif ".................Dieu kien dong lenh.....................":
                             try:
                                 self.vps.find_element_by_xpath('//*[@id="right_btnordertype"]/div/span[3]').click() #Chon MTL
                                 sleep(0.1)
@@ -439,7 +429,7 @@ if __name__ == "__main__":
     fee = 1
     MA_priod = 30
     over_tp = [1.5, 1, 0.5]
-    acc_list = ['421316', 'Manhtien@194']
+    acc_list = ['........', '.............']
     import_log = 0
     zone_len = 0.3
 
